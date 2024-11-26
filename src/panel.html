@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Panel de Gerente</title>
+    <link rel="stylesheet" type="text/css" href="panel-styles.css">
+    <link rel="stylesheet" type="text/css" href="modal-reportar-incidencia-style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="div-nav">
+            <h1>Bienvenido: %= request.getAttribute("nombreUsuario") %</h1>
+            <div class="nav-buttons">
+                <button class="nav-button nav-config">Configuración</button>
+                <button class="nav-button nav-logout">Cerrar Sesión</button>
+                
+            </div>
+        </div>
+        
+        <button id="reportar-problema-btn" class="report-button">Reportar Un Problema</button>
+
+        <h2>Tickets</h2>
+
+        <div class="opciones-tickets">
+            <button onclick="asignarTecnico()">Asignar Técnicos</button>
+            <button onclick="verTicketsSinTecnico()">Ver Tickets sin Técnico</button>
+            <button onclick="verTicketsConRespuesta()">Ver Tickets con respuesta</button>
+            <button onclick="verTodosLosTickets()">Ver todos los Tickets</button>
+        </div>
+        
+        <div class="table-container">
+            <table class="tickets-table">
+                <thead>
+                    <tr>
+                        <th>Num Cédula</th>
+                        <th>Nombre Completo</th>
+                        <th>Técnico</th>
+                        <th>Estado</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Num Cédula</td>
+                        <td>Nombre Completo</td>
+                        <td>Técnico</td>
+                        <td>Estado</td>
+                        <td><button>Eliminar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="acciones">
+            <label for="tecnicos">Escoge un Técnico para el(los) Ticket(s):</label>
+            <select id="tecnicos">
+                %-- Aquí se generan dinámicamente las opciones de técnicos --%
+            </select>
+
+        </div>
+    </div>
+</body>
+</html>

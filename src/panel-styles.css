@@ -1,0 +1,177 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #73fcf0; /* Color de fondo más claro */
+    color: #000000; /* Color de texto principal */
+    width: 100%;
+    margin: 0;
+}
+
+.div-nav {
+    width: 100%;
+    height: 60px; /* Reducido de 75px a 60px */
+    background-color: #1aa6af;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffffff;
+    border: 3px solid #100455;
+    padding: 0 20px;
+}
+.div-nav h1 {
+    margin: 0;
+    font-size: 1.2rem; /* Reduce el tamaño de la fuente */
+    font-weight: normal; /* Hace que el texto sea menos pesado visualmente */
+}
+.nav-buttons {
+    display: flex;
+}
+
+.nav-button {
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px; /* Reducido de 10px 20px a 8px 16px */
+    margin-left: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.9rem; /* Añade esta línea para reducir el tamaño del texto del botón */
+}
+.nav-logout {
+    background-color: #20dbd6; /* Color para Cerrar Sesión */
+}
+
+.nav-logout:hover {
+    background-color: #1aabb0; /* Color al pasar el mouse */
+}
+
+.nav-config {
+    background-color: #122034; /* Color para Configuración */
+}
+
+.nav-config:hover {
+    background-color: #0e1825; /* Color al pasar el mouse */
+}
+
+.report-button {
+    background-color: red; /* Color rojo para el botón */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px; /* Margen superior */
+    border-radius: 20px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start; /* Alinea el botón a la izquierda */
+}
+
+.report-button:hover {
+    background-color: darkred; /* Color al pasar el mouse */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+.table-container {
+    width: 80%; /* El contenedor de la tabla no ocupa todo el espacio */
+    max-height: 400px; /* Altura máxima para el contenedor */
+    overflow-y: auto; /* Habilita el scroll vertical */
+    border-radius: 8px; /* Bordes redondeados */
+    margin: 20px auto; /* Añade margen para centrar el contenedor */
+}
+
+.tickets-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tickets-table th, .tickets-table td {
+    padding: 10px;
+    border: none; /* Elimina las líneas de borde */
+}
+
+.tickets-table th {
+    background-color: #08d5c1; /* Color de fondo */
+}
+
+.tickets-table td {
+    background-color: #ffffff; /* Fondo blanco para celdas */
+}
+
+.tickets-table button {
+    background-color: #1aa6af; /* Color del botón eliminar */
+    color: #ffffff; /* Color del texto */
+    border: none;
+    padding: 5px 10px;
+    border-radius: 20px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tickets-table button:hover {
+    background-color: #188e92; /* Color al pasar el mouse */
+}
+
+.acciones {
+    margin-top: 20px;
+}
+
+.acciones button {
+    padding: 10px;
+    margin: 5px;
+    background-color: #04c1af; /* Color de fondo */
+    border: none;
+    border-radius: 4px;
+    color: #ffffff; /* Color de texto */
+    cursor: pointer;
+}
+
+.acciones button:hover {
+    background-color: #00ae9c; /* Color de fondo al pasar el mouse */
+}
+
+.opciones-tickets {
+    display: flex;
+    justify-content: space-around; /* Distribuye los botones uniformemente */
+    padding: 10px; /* Padding para la barra */
+}
+
+.opciones-tickets button {
+    background-color: #4a4a4a;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 5px; /* Espacio entre los botones */
+}
+
+.opciones-tickets button:hover {
+    background-color: #6c6c6c;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .table-container {
+        width: 100%; /* El contenedor de la tabla ocupa todo el ancho en pantallas pequeñas */
+    }
+
+    .nav-buttons {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .nav-button {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+}
